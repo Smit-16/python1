@@ -1,0 +1,100 @@
+.login{
+    /* position: fixed; */
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 100%;
+    width: 25%;
+    z-index: 10;
+    margin: auto;
+    margin-top: 14%;
+    
+    /* display: none; */
+    background-color: white;
+}
+
+.sgn{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 15px;
+}
+.sgin{
+    margin-left: 90px;
+    font-size: 15px;
+}
+.sgin1{
+    color: blue;
+    cursor: pointer;
+}
+.flname{
+    margin: 20px 0px 0px 20px;
+    padding: 0%;
+
+
+}
+.flname input{
+    width: 46%;
+    height: 30px;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid black;
+}
+.epb input{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(233, 233, 233);
+    margin: 0px 0px 0px 20px;
+    outline: none;
+    border: 1px solid black;
+
+}
+.epb1{
+    background-color: blue;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    padding-top: 6px;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+.fgp{
+    /* border: 1px solid black; */
+    margin: 5px 0px 0px 70px;
+    width: 180px;
+    text-align: center;
+    height: 25px;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: blue;
+    cursor: pointer;
+}
+.cnc{
+    /* border: 1px solid black; */
+    margin-left: 250px;
+    border-radius: 250px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+@media(max-width: 450px){
+    .login{
+        /* position: fixed; */
+        border: 1px solid black;
+        border-radius: 20px;
+        height: 100%;
+        width: 98%;
+        z-index: 10;
+        margin: auto;
+        margin-top: 14%;
+    
+        /* display: none; */
+        background-color: white;
+    }
+
+}

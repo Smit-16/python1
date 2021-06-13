@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newpbook.css">
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Postbook</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="file" accept="image/*" name="image" id="file"
+            onchange="loadFile(event),loadFile1(event),loadFile2(event),loadFile3(event), loadFile4(event), loadFile5(event), loadFile6(event), loadFile7(event), loadFile8(event), loadFile9(event), loadFile10(event)"
+            style="display: none;">
+
+        <div class="navigation">
+            <div class="nav1">
+                <div class="pblogo"><img src="logo1.png"  class="pblogo1"></div>
+                <div class="Postbook">Postbook</div>
+            </div>
+            <div class="nav2">
+                <div class="homeicon"><a href="#blankspace"><i class="material-icons md-48" id="homeiconid">home</i></a>
+                </div>
+                <div class="tvicon"><i class="material-icons md-48" id="tviconid">
+                        ondemand_video
+                    </i></div>
+                <div class="playicon"><i class="material-icons md-48" id="playiconid">
+                        play_circle
+                    </i></div>
+                <div class="profileicon"><a href="#blankspace"><i class="material-icons md-48" id="profileiconid">
+                            account_circle
+                        </i></a></div>
+            </div>
+            <div class="nav3">
+                <div class="gotoprofile">
+                    <div class="gtphoto"><img src="FLOGO.png" id="pfu6" class="gtphoto1"></div>
+                    <div class="gtname">Smit</div>
+                </div>
+                <div class="msgntfadd">
+                    <div class="msg"><i class="material-icons md-28">
+                            chat
+                        </i></div>
+                    <div class="noti"><i class="material-icons md-28">
+                            notifications
+                        </i></div>
+                    <div class="add"><i class="material-icons md-28">
+                            add
+                        </i></div>
+                    <div class="more"><i class="material-icons md-28">
+                            more_vert
+                        </i></div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="blankspace"></div>
+        <div class="box">
+            <div class="box1" id="box1id">
+                <div class="bx11">
+                    <div class="bx1pht">
+                        <div class="bx1pht1"><img src="FLOGO.png" id="pfu7" class="gtphoto1"></div>
+                        <div class="bx1pht2">Smit Nagar</div>
+                    </div>
+                    <div class="bx12"><i class="material-icons md-28">people_alt</i>&nbsp; Friends</div>
+                    <div class="bx12"><i class="material-icons md-28">groups</i>&nbsp; Groups</div>
+                    <div class="bx12"><i class="material-icons md-28">store</i>&nbsp; Marketplace</div>
+                    <div class="bx12"><i class="material-icons md-28">play_circle</i>&nbsp; Videos</div>
+                    <div class="bx12"><i class="material-icons md-28">event_available</i>&nbsp; Events</div>
+                    <div class="bx12"><i class="material-icons md-28">ondemand_video</i>&nbsp; Watch</div>
+                    <div class="bx12"><i class="material-icons md-28">expand_circle_down</i>&nbsp; See more</div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="box21" id="box21id">
+                    <div class="vsty" id="viewstry1">
+                        <button class="close">&times;</button>
+                        <img src="postbook.png" alt="" class="strimg">
+                    </div>
+
+
+                    <div class="box0" id="pst2">
+                        <div class="box01">
+                            <div class="box011"><img src="FLOGO.png" alt="" id="pfu8" class="box0111"></div>
+                            <div class="box013"><i class="fas fa-plus" id="crs"></i></div>
+                            <div class="box012">Create a story</div>
+                        </div>
+                        <div class="box01" onclick="toggleHide3()">
+                            <div class="cir"><img src="logo1.png" alt="" class="cirimg"></div>
+                            <div class="box02">
+                                <div><img src="postbook.png" alt="" class="box03"></div>
+                            </div>
+                        </div>
+                        <div class="box01" onclick="toggleHide3()">
+                            <div class="cir"><img src="logo1.png" alt="" class="cirimg"></div>
+                            <div class="box02">
+                                <div><img src="postbook.png" alt="" class="box03"></div>
+                            </div>
+                        </div>
+                        <div class="box01" onclick="toggleHide3()">
+                            <div class="cir"><img src="logo1.png" alt="" class="cirimg"></div>
+                            <div class="box02">
+                                <div><img src="postbook.png" alt="" class="box03"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="post1">
+                        <div class="photo">
+                            <div class="photo1">
+                                <img src="p1.jpg" alt="" class="pphoto">
+                                <div class="pphoto1">
+                                    <div class="pphoto11"> Gloria Taylor </div>
+                                    <div class="pphoto12"> 31sep </div>
+                                </div>
+                            </div>
+                            <div class="photo2">Welcome on my PhoneBook</div>
+                            <div class="photo3"><img src="FLOGO.png" alt="" class="pphoto31"></div>
+                            <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                                    id="cmsmb">&nbsp;10Comment</i></div>
+                            <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                                        class="far fa-thumbs-up" id="lsymb">&nbsp;Like</button></i> <button
+                                    id="cmtbtn"><i class="far fa-comment" id="cms">&nbsp;Comment</i></button><button
+                                    id="srebtn"> <i class="far fa-share-square" id="shsm">&nbsp;Share</i></button>
+
+
+                            </div>
+
+                        </div>
+                       
+
+
+
+                    </div>
+                </div>
+                <div class="box23" id="box23id">
+                    <div class="stplay">
+
+                        <video id="vdo11" class="vdo" src="v1.mp4" loop autoplay ondblclick="play()" onclick="pause()">
+
+                        </video>
+                        <div class="vdoor">
+                            <div class="vdoonrn1"><img src="FLOGO.png" alt="" class="vdoonr"></div>
+                            <div class="vdoonrn2"> Smit Nagar </div>
+                        </div>
+                        <div class="vdlcs">
+                            <div class="vdlcs1">
+                                <div class="vdob1"><i class="far fa-heart"> </i></div>
+                                <div class="vdob2"><i class="far fa-comment"></i></div>
+                                <div class="vdob3"><i class="far fa-share-square"></i></div>
+                            </div>
+                            <div class="vdlcs2">
+                                <div class="vdob4"><i class="far fa-heart">10 </i> </div>
+                                <div class="vdob5"><i class="far fa-comment">2</i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stplay">
+
+                        <video id="vdo21" class="vdo" src="v2.mp4" loop autoplay ondblclick="play()" onclick="pause()">
+
+                        </video>
+                        <div class="vdoor">
+                            <div class="vdoonrn1"><img src="FLOGO.png" alt="" class="vdoonr"></div>
+                            <div class="vdoonrn2"> Smit Nagar </div>
+                        </div>
+                        <div class="vdlcs">
+                            <div class="vdlcs1">
+                                <div class="vdob1"><i class="far fa-heart"> </i></div>
+                                <div class="vdob2"><i class="far fa-comment"></i></div>
+                                <div class="vdob3"><i class="far fa-share-square"></i></div>
+                            </div>
+                            <div class="vdlcs2">
+                                <div class="vdob4"><i class="far fa-heart">10 </i> </div>
+                                <div class="vdob5"><i class="far fa-comment">2</i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box3" id="box3id">
+                <div class="bx31">
+
+                    <div class="ypages">Your Pages</div>
+                    <div class="bx1pht">
+                        <div class="bx1pht1"><img src="FLOGO.png" id="pfu9" class="gtphoto1"></div>
+                        <div class="bx1pht2">Smit Nagar</div>
+                    </div>
+                    <div class="crtpromo">
+                        <div class="crtpromo1"><i class="material-icons">campaign</i></div>
+                        <div class="crtpromo2"> &nbsp; Create Promotion</div>
+                    </div>
+                    <div class="Contact"> Contacts <div class="videosearch"><i class="material-icons">video_call</i> <i
+                                class="material-icons">search
+                            </i></div>
+                    </div>
+                    <div class="friends">
+
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p1.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Emily Clarke</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p2.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Roy Jenning</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p3.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Aldrich Norri</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p4.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Angela Barber</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p1.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Emily Clarke</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p2.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Roy Jenning</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p3.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Aldrich Norri</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p4.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Angela Barber</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p1.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Emily Clarke</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p2.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Roy Jenning</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p3.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Aldrich Norri</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p4.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Angela Barber</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p1.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Emily Clarke</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p2.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Roy Jenning</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p3.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Aldrich Norri</div>
+                        </div>
+                        <div class="bx1pht">
+                            <div class="bx1pht1"><img src="p4.jpg" alt="" class="gtphoto1"></div>
+                            <div class="bx1pht2">Angela Barber</div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mp">
+        <div class="myprofile" id="myprofile1">
+            <div class="coverpht"><img src="cvr.jpg" alt="" class="coverpht1"></div>
+            <div class="profpht"><img src="FLOGO.png" alt="" id="pfu10" class="profpht1"></div>
+            <div id="up16">
+                <div class="updtppht" id="updtppht1">
+
+                    <div class="updtpht">
+                        <div><label for="file" style="cursor: pointer;">Upload Image</label></div>
+                    </div>
+                    <div class="dltpht">Delete profile photo</div>
+                </div>
+            </div>
+            <div class="prfname">SMIT NAGAR</div>
+            <div class="prfbio">Add bio</div>
+
+
+            <div class="prfitrpht">
+                <div class="intro">
+                    <div class="intro1">Intro</div>
+                    <div class="intro2">
+                        <div class="intro3"><i class="fas fa-graduation-cap"></i> Studied at <b>Sephar
+                                University</b></div>
+                        <div class="intro3"><i class="fas fa-graduation-cap"></i> Went to <b> M.K Gandhi
+                                Vidyalay</b></div>
+                        <div class="intro3"><i class="fas fa-home"></i> Live in <b>Baroda, Gujarat, India</b>
+                        </div>
+                        <div class="intro3"><i class="fas fa-map-marker-alt"></i> From <b>Baroda, Gujarat,
+                                India</b>
+                        </div>
+                        <div class="intro3"><i class="far fa-clock"></i> Join on May 2021</div>
+                    </div>
+                    <div class="edtint">Edit Profile</div>
+                </div>
+                <div class="phts">
+                    <div class="phts1">Photos</div>
+                    <div class="phts2" id="pst3">
+
+                    </div>
+                </div>
+            </div>
+            <div class="writesmthg">
+                <div class="wrtpht"><img src="FLOGO.png" id="pfu11" alt="" class="wrtpht1"></div>
+                <div class="wstay"><input type="text" placeholder="Write Somthing..!!"></div>
+            </div>
+            <div class="prfpost">
+                <div class="pst1" id="pst1">Post </div>
+                <div class="post1" id="post1id">
+               
+
+
+                </div>
+                <div id="smitnagar123">
+                    <button id="smit123">click</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var loadFile = function (event) {
+            var image = document.getElementById('pfu7')
+            image.src = URL.createObjectURL(event.target.files[0]);
+            smit()
+        };
+        var loadFile1 = function (event) {
+            var image1 = document.getElementById('pfu2')
+            image1.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile2 = function (event) {
+            var image2 = document.getElementById('pfu3')
+            image2.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile3 = function (event) {
+            var image3 = document.getElementById('pfu4')
+            image3.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile4 = function (event) {
+            var image4 = document.getElementById('pfu5')
+            image4.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile5 = function (event) {
+            var image5 = document.getElementById('pfu6')
+            image5.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile6 = function (event) {
+            var image6 = document.getElementById('pfu1')
+            image6.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile7 = function (event) {
+            var image7 = document.getElementById('pfu8')
+            image7.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile8 = function (event) {
+            var image8 = document.getElementById('pfu9')
+            image8.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile9 = function (event) {
+            var image9 = document.getElementById('pfu10')
+            image9.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile10 = function (event) {
+            var image10 = document.getElementById('pfu11')
+            image10.src = URL.createObjectURL(event.target.files[0]);
+            console.log(image10.src)
+            
+        };
+       
+        let date = new Date;
+
+        // a = date.getMonth();
+
+        a = date.toLocaleString('default', { month: 'long' });
+        b = date.getDate();
+
+        function smit() {
+            let post = document.getElementById('post1id');
+            post.innerHTML += `
+            <div class="photoprf">
+                <div class="photo1">
+                    <img src="p1.jpg" alt="" class="pphoto" id = "pfu1">
+                    <div class="pphoto1">
+                        <div class="pphoto11"> Smit Nagar </div>
+                        <div class="pphoto12"> ${a} ${b} </div>
+                    </div>
+                </div>
+                <div class="photo2">Welcome on my PhoneBook</div>
+                <div class="photo3"><img src="{{image1.src}}" alt="" class="pphoto31" id ="pfu2"></div>
+                <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                        id="cmsmb">&nbsp;10Comment</i></div>
+                <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                            class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                            class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                            class="far fa-share-square" id="shsm">Share</i></button>
+
+
+                </div>
+
+            </div> `;
+        localStorage.setItem("35", post.innerHTML)
+        // let spt2 = document.getElementById('pst1')
+
+        // let saved = localStorage.getItem("35")
+        // // let mit1 =  document.getElementById('smit')
+
+        // if (saved) {
+        //     muuu.innerHTML = saved;
+        // }
+
+            let post1 = document.getElementById('pst2');
+            post1.insertAdjacentHTML("afterend", `  <div class="post1">
+            <div class="photo">
+                <div class="photo1">
+                    <img src="p1.jpg" alt="" class="pphoto" id = "pfu3">
+                    <div class="pphoto1">
+                        <div class="pphoto11"> Smit Nagar </div>
+                        <div class="pphoto12"> ${a} ${b} </div>
+                    </div>
+                </div>
+                <div class="photo2">Welcome on my PhoneBook</div>
+                <div class="photo3"><img src="" alt="" class="pphoto31" id ="pfu4"></div>
+                <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                        id="cmsmb">&nbsp;10Comment</i></div>
+                <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                            class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                            class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                            class="far fa-share-square" id="shsm">Share</i></button>
+                </div>
+            </div>
+        </div>`)
+
+            let post2 = document.getElementById('pst3');
+            post2.insertAdjacentHTML("afterbegin", `<div class="phts3"><img src="p1.jpg" alt="" id="pfu5" class="phts31"></div>`)
+
+
+
+
+
+        };
+    </script>
+
+    <script>
+        // let mu = document.getElementById('smit123')
+        // mu.addEventListener('click',function (event){
+        //     let spt1 = document.getElementById('smitnagar123')
+        //     spt1.innerHTML += `<div class="post1">
+        //     <div class="photo">
+        //         <div class="photo1">
+        //             <img src="p1.jpg" alt="" class="pphoto">
+        //             <div class="pphoto1">
+        //                 <div class="pphoto11"> Smit Nagar </div>
+        //                 <div class="pphoto12">  </div>
+        //             </div>
+        //         </div>
+        //         <div class="photo2">Welcome on my PhoneBook</div>
+        //         <div class="photo3"><img src="ph.jpg" alt="" class="pphoto31"></div>
+        //         <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+        //                 id="cmsmb">&nbsp;10Comment</i></div>
+        //         <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+        //                     class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+        //                     class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+        //                     class="far fa-share-square" id="shsm">Share</i></button>
+        //         </div>
+        //     </div>
+        // </div>`;
+        //     localStorage.setItem("35", spt1.innerHTML);
+        // });
+        // let spt2 = document.getElementById('smitnagar123')
+
+        //     let saved = localStorage.getItem("35")
+        //     // let mit1 =  document.getElementById('smit')
+            
+        //     if (saved) {
+	    //         spt2.innerHTML = saved;
+        //     }
+        
+    </script>
+    <script src="newpbook.js"></script>
+</body>
+
+</html>

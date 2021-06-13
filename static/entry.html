@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Ubuntu Condensed', sans-serif;
+        }
+        .container{
+            border: 1px solid black;
+            height: 65%;
+            width: 30%;
+            margin: auto;
+        }
+        .name{
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            margin: 15px 20px;
+            border-bottom: 2px solid rgb(150, 150, 150);
+        }
+        .fname, .lname{ 
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 40%;
+            float: left;
+            margin: 7px 1px;
+        }
+        .lname input, 
+        .fname input{
+            border: none;
+            border-bottom: 1px solid black;
+
+        }
+        .city,.state,.country{
+            width: 80%;
+            margin: 7px 3px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name">Postbook</div>
+        <div class="flname">
+        <input type="text" class="fname" placeholder="First name">
+        <input type="text" class="lname" placeholder="Last name">
+    </div>
+    <div class="ct">
+    <input type="text" class="city" placeholder="City">
+</div>
+<div class="st">
+    <input type="text" class="state" placeholder="State">
+</div>
+<div class="cu">
+    <input type="text" class="country" placeholder="Country">
+</div>
+
+
+
+
+    </div>
+    
+</body>
+</html>

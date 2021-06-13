@@ -1,0 +1,591 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'homePage1.css' %}">
+    <title>Post Book</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        var clicks = 0;
+
+        function onClick() {
+            clicks += 1;
+            document.getElementById("lsmb").innerHTML = " " + clicks;
+        };
+    </script>
+    <script>
+        var clicks = 0;
+
+        function onClick1() {
+            clicks += 1;
+            document.getElementById("lsmb1").innerHTML = " " + clicks;
+        };
+    </script>
+</head>
+
+<body id="bd">
+    <div class="container">
+        <input type="file" accept="image/*" name="image" id="file"
+            onchange="loadFile(event),loadFile1(event),loadFile2(event),loadFile3(event), loadFile4(event), loadFile5(event), loadFile6(event), loadFile7(event), loadFile8(event), loadFile9(event), loadFile10(event)"
+            style="display: none;">
+        <div class="navigation" id="navigationid">
+            <div class="navigation1">
+                <div class="webimg">
+                    <div><img src="{%static 'logo1.png' %}" alt="" class="navlogo1"></div>
+                </div>
+                <div class="webname">Postbook</div>
+                <div class="mns">
+
+                    <div class="nav31"><i class="far fa-comments" onclick="toggleHide()"></i></div>
+                    <div class="nav31"><i class="fas fa-bell" onclick="toggleHide2()"></i></div>
+                    <div class="nav31">
+                        <div class="drawablemenu">
+                            &#9776;
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="navigationtop">
+            <div class="navbar1">
+                <div class="nav1">
+                    <div><img src="{%static 'logo1.png' %}" alt="" class="navlogo"></div>
+                    <div class="sear"> <input type="search" id="search" placeholder=" Search Phonebook">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar2">
+                <div class="nav2">
+                    <div><a href="#postbook" class="navhome" id="navhome"><i class="fas fa-home"
+                                onclick="(toggleHide34())"></i></a></div>
+                    <div><a href="#postbook" class="navtv" id="navtv"><i class="fas fa-tv"
+                                onclick="toggleHide35()"></i></a></div>
+                    <div><a href="#postbook" class="navplay" id="navplay"><i class="far fa-play-circle"
+                                onclick="toggleHide36()"></i></a>
+                    </div>
+                    <div><a href="#postbook" class="navuser" id="navuser"><i class="fas fa-user-circle"
+                                onClick="toggleHide37()"></i></a></div>
+
+                </div>
+            </div>
+            <div class="navbar3">
+                <div class="nav3">
+                    <div class="frd23" onclick="toggleHide37()"><img src="/media/{{profileimg.Upload_photo}}" alt="" class="pphoto" id="frd22">
+                        <div class="frd21"> Smit</div>
+                    </div>
+                    <div class="nav31"><i class="fas fa-plus" onclick="toggleHide1()"></i></div>
+                    <div class="nav31"><i class="far fa-comments" onclick="toggleHide()"></i></div>
+                    <div class="nav31"><i class="fas fa-bell" onclick="toggleHide2()"></i></div>
+                    <div class="nav31"><i class="fas fa-caret-down"></i></div>
+
+                </div>
+            </div>
+        </div>
+        <div id="postbook"></div>
+
+        <div id="noti">
+            <div class="notif">
+                <div onclick="toggleHide2()" class="bknoti"><i class="fas fa-arrow-left"></i></div>
+                <div class="namenoti">Notifications</div>
+            </div>
+            <div class="notppl">
+                <div class="notifi">
+                    <div class="ntfrd2">
+                        <div class="notimg"><img src="{%static 'p1.jpg' %}" alt="" class="pphoto" id="frd22"></div>
+                        <div class="notdt">
+                            <div class="notippl"><b> Emily Clarke</b> Like your photo.</div>
+                            <div class="ntim">10 min ago</div>
+                        </div>
+                    </div>
+                    <div class="ntfrd2">
+                        <div class="notimg"><img src="{%static 'p2.jpg' %}" alt="" class="pphoto" id="frd22"></div>
+                        <div class="notdt">
+                            <div class="notippl"><b> Roy Jenning</b> Comment on your photo.</div>
+                            <div class="ntim">12 min ago</div>
+                        </div>
+                    </div>
+                    <div class="ntfrd2">
+                        <div class="notimg"><img src="{%static 'p4.jpg' %}" alt="" class="pphoto" id="frd22"></div>
+                        <div class="notdt">
+                            <div class="notippl"><b> Angela Barber</b> Like your photo.</div>
+                            <div class="ntim">15 min ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="msg">
+            <div class="mtt">
+                <div class="mtt11" onclick="toggleHide()"><i class="fas fa-arrow-left"></i></div>
+                <div class="mtt12">Messanger</div>
+            </div>
+            <div class="msgsrc">
+                <input type="search" id="search" placeholder="Search People">
+            </div>
+            <div class="frd2" onclick="toggleHide13()"><img src="{%static 'p1.jpg' %}" alt="" class="pphoto" id="frd22">
+                <div class="frd21"> Emily Clarke</div>
+            </div>
+            <div class="frd2" onclick="toggleHide14()"><img src="{%static 'p2.jpg' %}" alt="" class="pphoto" id="frd22">
+                <div class="frd21"> Roy Jenning</div>
+            </div>
+            <div class="frd2" onclick="toggleHide15()"><img src="{%static 'p3.jpg' %}" alt="" class="pphoto" id="frd22">
+                <div class="frd21"> Aldrich Norris</div>
+            </div>
+
+        </div>
+        <div>
+            <div id="msg01" class="msg1">
+                <div class="msgnv">
+                    <div class="bkbtn" onclick="toggleHide13()"><i class="fas fa-arrow-left"></i></div>
+                    <div class="frd2"> <img src="{%static 'p1.jpg' %}" alt="" class="pphoto" id="frd22">
+                        <div class="frd21"> Emily Clarke</div>
+                        <div class="conopt">
+                            <div class="vdcll"><i class="fas fa-video"></i></div>
+                            <div class="aducll"><i class="fas fa-phone-alt"></i></div>
+                            <div class="dtls"><i class="fas fa-ellipsis-v"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgspc">
+                    <div class="phtbx">
+                        <img src="{%static 'FLOGO.png' %}" alt="" class="phtbx1">
+                        <img src="{%static 'p1.jpg' %}" alt="" class="phtbx2">
+                    </div>
+                    <div class="phtdtls">
+                        PhoneBook <br> You're Friends on phoneBook
+                    </div>
+                </div>
+                <div class="msgwrt">
+                    <div class="msgwrt1">
+                        <i class="fas fa-plus-circle"></i>
+                        <i class="fas fa-camera"></i>
+                        <i class="far fa-images"></i>
+                        <i class="far fa-sticky-note"></i>
+                    </div>
+                    <div class="msgwrt2">
+                        <input type="text" class="wrtmsg" placeholder="Write massage">
+                    </div>
+                    <div class="msgwrt3">
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="msg02" class="msg1">
+                <div class="msgnv">
+                    <div class="bkbtn" onclick="toggleHide14()"><i class="fas fa-arrow-left"></i></div>
+                    <div class="frd2"> <img src="{%static 'p2.jpg' %}" alt="" class="pphoto" id="frd22">
+                        <div class="frd21"> Emily Clarke</div>
+                        <div class="conopt">
+                            <div class="vdcll"><i class="fas fa-video"></i></div>
+                            <div class="aducll"><i class="fas fa-phone-alt"></i></div>
+                            <div class="dtls"><i class="fas fa-ellipsis-v"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgspc">
+                    <div class="phtbx">
+                        <img src="{%static 'FLOGO.png' %}" alt="" class="phtbx1">
+                        <img src="{%static 'p2.jpg' %}" alt="" class="phtbx2">
+                    </div>
+                    <div class="phtdtls">
+                        PhoneBook <br> You're Friends on phoneBook
+                    </div>
+                </div>
+                <div class="msgwrt">
+                    <div class="msgwrt1">
+                        <i class="fas fa-plus-circle"></i>
+                        <i class="fas fa-camera"></i>
+                        <i class="far fa-images"></i>
+                        <i class="far fa-sticky-note"></i>
+                    </div>
+                    <div class="msgwrt2">
+                        <input type="text" class="wrtmsg" placeholder="Write massage">
+                    </div>
+                    <div class="msgwrt3">
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="msg03" class="msg1">
+                <div class="msgnv">
+                    <div class="bkbtn" onclick="toggleHide15()"><i class="fas fa-arrow-left"></i></div>
+                    <div class="frd2"> <img src="{%static 'p3.jpg' %}" alt="" class="pphoto" id="frd22">
+                        <div class="frd21"> Emily Clarke</div>
+                        <div class="conopt">
+                            <div class="vdcll"><i class="fas fa-video"></i></div>
+                            <div class="aducll"><i class="fas fa-phone-alt"></i></div>
+                            <div class="dtls"><i class="fas fa-ellipsis-v"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgspc">
+                    <div class="phtbx">
+                        <img src="{%static 'FLOGO.png' %}" alt="" class="phtbx1">
+                        <img src="{%static 'p3.jpg' %}" alt="" class="phtbx2">
+                    </div>
+                    <div class="phtdtls">
+                        PhoneBook <br> You're Friends on phoneBook
+                    </div>
+                </div>
+                <div class="msgwrt">
+                    <div class="msgwrt1">
+                        <i class="fas fa-plus-circle"></i>
+                        <i class="fas fa-camera"></i>
+                        <i class="far fa-images"></i>
+                        <i class="far fa-sticky-note"></i>
+                    </div>
+                    <div class="msgwrt2">
+                        <input type="text" class="wrtmsg" placeholder="Write massage">
+                    </div>
+                    <div class="msgwrt3">
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+            <a src="{%static 'I:\Web Development\phoneBook\icon\home.png' %}" alt="" style="color: black;"></a>
+            <div class="box">
+
+                <div class="box1" id="box1">
+
+                    <div class="bx11">
+                        <div class="frd2">
+                        <img src="/media/{{profileimg.Upload_photo}}" alt="" class="pphoto" id="frd221">
+                            <div class="frd21"><b> Smit Nagar </b></div>
+                        </div>
+                        <div class="frnds"><i class="fas fa-user-friends"></i>&nbsp; Friends</div>
+                        <div class="frnds"><i class="fas fa-users"></i>&nbsp; Groups</div>
+                        <div class="frnds"><i class="fas fa-map-marked-alt"></i>&nbsp; Marketplace</div>
+                        <div class="frnds"><i class="far fa-play-circle"></i>&nbsp; <a href="shortplay.html">Videos</a>
+                        </div>
+                        <div class="frnds"><i class="fas fa-calendar-alt"></i>&nbsp; Events</div>
+                        <div class="frnds"><i class="fas fa-tv"></i>&nbsp; <a href="dgtv.html"> Watch</a></div>
+                        <div class="frnds"><i class="fas fa-angle-down" id="frnds12"></i>&nbsp; See more</div>
+                    </div>
+                </div>
+                <div class="box2">
+
+                    <div id="blnkspc"></div>
+                    <!-- <div class="b1"> -->
+                    <div class="box21" id="box211">
+
+                        <div class="vsty" id="viewstry1">
+                            <button onclick="toggleHide3()" class="close">&times;</button>
+                            <img src="{%static 'postbook.png' %}" alt="" class="strimg">
+                        </div>
+                        <div class="box0" id="pst2">
+                            <div class="box01">
+                                <div class="box011"><img src="/media/{{profileimg.Upload_photo}}" alt="" id="pfu7" class="box0111"></div>
+                                <div class="box013"><i class="fas fa-plus" id="crs"></i></div>
+                                <div class="box012">Create a story</div>
+                            </div>
+                            <div class="box01" onclick="toggleHide3()">
+                                <div class="cir"><img src="{%static 'logo1.png' %}" alt="" class="cirimg"></div>
+                                <div class="box02">
+                                    <div><img src="{%static 'postbook.png' %}" alt="" class="box03"></div>
+                                </div>
+                            </div>
+                            <div class="box01" onclick="toggleHide3()">
+                                <div class="cir"><img src="{%static 'logo1.png' %}" alt="" class="cirimg"></div>
+                                <div class="box02">
+                                    <div><img src="{%static 'postbook.png' %}" alt="" class="box03"></div>
+                                </div>
+                            </div>
+                            <div class="box01" onclick="toggleHide3()">
+                                <div class="cir"><img src="{%static 'logo1.png' %}" alt="" class="cirimg"></div>
+                                <div class="box02">
+                                    <div><img src="{%static 'postbook.png' %}" alt="" class="box03"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post1">
+                            {% for image in img%}
+
+                            <div class="photo">
+                                <div class="photo1">
+                                    <img src="/media/{{profileimg.Upload_photo}}"   alt=" " class="pphoto">
+                                    <div class="pphoto1">
+                                        <div class="pphoto11"> Smit nagar </div>
+                                        <div class="pphoto12"> 16Aug </div>
+                                    </div>
+                                </div>
+                                <div class="photo2">Welcome on my PhoneBook</div>
+                                <div class="photo3"><img src="/media/{{image.Upload_photo}}" alt="" class="pphoto31"></div>
+                                <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                                        id="cmsmb">&nbsp;Comment</i></div>
+                                <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                                            class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                                            class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                                            class="far fa-share-square" id="shsm">Share</i></button>
+
+
+                                </div>
+
+                            </div>
+                           {% endfor %}
+
+
+
+                        
+                            <div class="photo">
+                                <div class="photo1">
+                                    <img src="{%static 'logo1.png' %}" alt="" class="pphoto">
+                                    <div class="pphoto1">
+                                        <div class="pphoto11"> PostBook </div>
+                                        <div class="pphoto12"> </div>
+                                    </div>
+                                </div>
+                                <div class="photo2">Welcome on PostBook</div>
+                                <div class="photo3"><img src="{% static 'postbook.png' %}" alt="" class="pphoto31"></div>
+                                <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                                        id="cmsmb">&nbsp;Comment</i></div>
+                                <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                                            class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                                            class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                                            class="far fa-share-square" id="shsm">Share</i></button>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="box22" id="box221">
+
+                        <div class="video1">
+                            <div class="video11">
+                                <img src="{%static 'logo1.png' %}" alt="" class="pphoto">
+                                <div class="pphoto1">
+                                    <div class="pphoto11"> PostBook </div>
+                                    <div class="pphoto12"> </div>
+                                </div>
+                            </div>
+                            <div class="photo2">Welcome on my PhoneBook</div>
+                            <div class="video3"><video src="{%static 'tv1.mp4' %}" id="vdo1" class="pphoto31" muted controls></video>
+                            </div>
+                            <div class="photo4"><i class="far fa-heart" id="lsmb1"> 0</i><i class="far fa-comment"
+                                    id="cmsmb">&nbsp;Comment</i></div>
+                            <div class="photo5"><button type="button" onClick="onClick1()" id="likebtn"><i
+                                        class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                                        class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                                        class="far fa-share-square" id="shsm">Share</i></button>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="box23" id="box231">
+                        <div id="box23id"></div>
+                        <div class="stplay">
+                            <div class="vdoor">
+                                <div class="vdoonrn1"><img src="{%static 'logo1.png' %}" alt="" class="vdoonr"></div>
+                                <div class="vdoonrn2"> PostBook </div>
+                            </div>
+                            <div class="vdlcs">
+                                <div class="vdob1"><i class="far fa-heart"> </i></div>
+                                <div class="vdob2"><i class="far fa-comment"></i></div>
+                                <div class="vdob3"><i class="far fa-share-square"></i></div>
+                                <div class="vdob4"><i class="far fa-heart"></i> </div>
+                                <div class="vdob5"><i class="far fa-comment"></i></div>
+                            </div>
+                            <video id="vdo11" class="vdo" src="{%static 'v5.mp4' %}" loop autoplay muted onclick="play()"
+                                ondblclick="pause()">
+
+                            </video>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="box3">
+                    <div class="box31">
+                        <div class="yp" id="yp1">
+                            <div id="crtact">
+
+                                <div class="cbox">
+                                    <p class="cna">Create</p>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="frd1">Your Pages</div>
+                            <div class="frd2"><img src="/media/{{profileimg.Upload_photo}}" alt="" class="pphoto" id="frd222">
+                                <div class="frd21"><b> Smit Nagar </b></div>
+                            </div>
+                            <div class="frd3"><i class="fas fa-volume-up"></i>&nbsp; Create Promotion</div>
+                            <div class="friends">
+                                <div class="frd4"> Contacts <i class="fas fa-video" id="frd41"></i> <i
+                                        class="fas fa-search" id="frd42"></i></div>
+                                <div class="frd2"><img src="{%static 'p1.jpg' %}" alt="" class="pphoto" id="frd22">
+                                    <div class="frd21"> Emily Clarke</div>
+                                </div>
+                                <div class="frd2"><img src="{%static 'p2.jpg' %}" alt="" class="pphoto" id="frd22">
+                                    <div class="frd21"> Roy Jenning</div>
+                                </div>
+                                <div class="frd2"><img src="{%static 'p3.jpg' %}" alt="" class="pphoto" id="frd22">
+                                    <div class="frd21"> Aldrich Norris</div>
+                                </div>
+                                <div class="frd2"><img src="{%static 'p4.jpg' %}" alt="" class="pphoto" id="frd22">
+                                    <div class="frd21"> Angela Barber</div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mp">
+                <div class="myprofile" id="myprofile1">
+                    <div class="coverpht"><img src="{%static 'cvr.jpg' %}" alt="" class="coverpht1"></div>
+                    <div class="profpht" onclick="toggleHide16()"><img src="/media/{{profileimg.Upload_photo}}" alt="" id="pfu1"
+                            class="profpht1"></div>
+                    <div id="up16">
+                        <div class="updtppht" id="updtppht1">
+
+                            
+                    <form method="post" enctype="multipart/form-data" onchange="submit()" id="muuu">
+                        {% csrf_token %}
+                        <p> <input type="file" name="Upload_photo" accept="image/*" required="" id="id_Upload_photo" style="display: none;"></p>
+                    </form>
+                            
+                            <div class="updtpht"><label for="id_Upload_photo">Upload photo</label></div>
+                            <div class="dltpht">Delete profile photo</div>
+                        </div>
+                    </div>
+                    <div class="prfname">SMIT NAGAR</div>
+                    <div class="prfbio">Add bio</div>
+
+
+                    <div class="prfitrpht">
+                        <div class="intro">
+                            <div class="intro1">Intro</div>
+                            <div class="intro2">
+                                <div class="intro3"><i class="fas fa-graduation-cap"></i> Studied at <b>Sephar
+                                        University</b></div>
+                                <div class="intro3"><i class="fas fa-graduation-cap"></i> Went to <b> M.K Gandhi
+                                        Vidyalay</b></div>
+                                <div class="intro3"><i class="fas fa-home"></i> Live in <b>Baroda, Gujarat, India</b>
+                                </div>
+                                <div class="intro3"><i class="fas fa-map-marker-alt"></i> From <b>Baroda, Gujarat,
+                                        India</b>
+                                </div>
+                                <div class="intro3"><i class="far fa-clock"></i> Join on May 2021</div>
+                            </div>
+                            <div class="edtint">Edit Profile</div>
+                        </div>
+                        <div class="phts">
+                            <div class="phts1">Photos</div>
+
+                            <div class="phts2" id="pst3">
+                                {% for image in img%}
+
+                            <div class="phts3"><img src="/media/{{image.Upload_photo}}" alt="" id="pfu8" class="phts31"></div>
+                                {% endfor %}
+
+                            
+                            </div>
+                           
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="writesmthg">
+                        <div class="wrtpht"><img src="/media/{{profileimg.Upload_photo}}" id="pfu2" alt="" class="wrtpht1"></div>
+                        <div class="wstay"><input type="text" placeholder="Write Somthing..!!"></div>
+                    </div>
+                    <div class="photovideo">
+                        <div class="postphoto" id="postphotoid" onclick="toggleHide38()"><i class="far fa-image"></i>
+                        </div>
+                        <div class="postvideo" id="postvideoid" onclick="toggleHide39()"><i class="far fa-play-circle"></i>
+                        </div>
+                        <div class="posttv" id="posttvid" onclick="toggleHide40()"><i class="fas fa-tv"></i></div>
+                    </div>
+                    <div class=" prfpost" id="prfpostid">
+                                <div class="pst1" id="pst1">Post </div>
+                                <div class="post1">
+                                {% for image in img%}
+
+                            <div class="photoprf">
+                                <div class="photo1">
+                                    <img src="/media/{{profileimg.Upload_photo}}" alt="" class="pphoto">
+                                    <div class="pphoto1">
+                                        <div class="pphoto11"> Smit nagar </div>
+                                        <div class="pphoto12"> 16Aug </div>
+                                    </div>
+                                </div>
+                                <div class="photo2">Welcome on my PhoneBook</div>
+                                <div class="photo3"><img src="/media/{{image.Upload_photo}}" alt="" class="pphoto31"></div>
+                                <div class="photo4"><i class="far fa-heart" id="lsmb"> 0</i><i class="far fa-comment"
+                                        id="cmsmb">&nbsp;Comment</i></div>
+                                <div class="photo5"><button type="button" onClick="onClick()" id="likebtn"><i
+                                            class="far fa-thumbs-up" id="lsymb">Like</button></i> <button id="cmtbtn"><i
+                                            class="far fa-comment" id="cms">Comment</i></button><button id="srebtn"> <i
+                                            class="far fa-share-square" id="shsm">Share</i></button>
+
+
+                                </div>
+
+                            </div>
+                           {% endfor %}
+                              </div>
+
+                        </div>
+                        <div class="prfvideo" id="prfvideoid">
+                            <div class="upvideo" id="upvideoid">
+                                <input type="file" accept="video/*" name="video" id="file1"
+                                    onchange="upvideo(),loadFile11(event),loadFile12(event)" style="display: none;">
+
+                                <div class="upvideo1"><label for="file1"
+                                        style="cursor: pointer;">Add video</label></div>
+                            </div>
+                         
+
+
+                        </div>
+                        <div class="prftv" id="prfthid"></div>
+
+                    </div>
+                </div>
+
+            </div>
+            <script src="{%static 'homepg.js' %}"></script>
+
+</body>
+
+</html>
